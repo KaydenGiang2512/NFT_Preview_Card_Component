@@ -17,8 +17,8 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 ### Links
 
-- Solution URL: ()
-- Live Site URL: ()
+- Solution URL: (https://www.frontendmentor.io/solutions/nft-preview-card-component-built-with-html5-and-flexbox-css3-H1aSyLSIq)
+- Live Site URL: (https://kaydengiang2512.github.io/NFT_Preview_Card_Component/)
 
 ## My process
 
