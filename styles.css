@@ -1,0 +1,234 @@
+@font-face {
+    font-family: "Outfit-Light";
+    src: url(Outfit/static/Outfit-Light.ttf);
+}
+
+@font-face {
+    font-family: "Outfit-Regular";
+    src: url(Outfit/static/Outfit-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Outfit-SemiBold";
+    src: url(Outfit/static/Outfit-SemiBold.ttf);
+}
+
+:root {
+    /* Primary color */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* Neutral colors */
+    --white: hsl(0, 0%, 100%);
+    --main-background: hsl(217, 54%, 11%);
+    --card-background: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+
+    /* Footer color */
+    /* --black: hsl(0, 0%, 0%); */
+
+    /* Font size */
+    font-size: 15px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    background-color: var(--main-background);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    flex-direction: column;
+}
+
+main {
+    max-height: 40rem;
+    max-width: 23.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1.2rem;
+    padding: 1.5rem 1.5rem;
+    background-color: var(--card-background);
+    position: relative;
+}
+
+.images {
+    display: flex;
+    position: relative;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.nft-image {
+    max-height: 20.5rem;
+    max-width: 20.5rem;
+    border-radius: 0.6rem;
+    transition: 0.5s ease-in-out;
+}
+
+.overlay, .view-icon {
+    opacity: 0;
+    width: 20.5rem;
+    height: 20.5rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.overlay {
+    background-color: var(--cyan);
+    border-radius: 0.6rem;
+}
+
+
+.text {
+    margin: 1rem 0;
+}
+
+.text h1 {
+    font-family: "Outfit-SemiBold", sans-serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 0.5rem 0;
+    transition: 0.4s ease-in-out;
+}
+
+.text p {
+    font-family: "Outfit-Light", sans-serif;
+    font-size: 1.2rem;
+    color: var(--soft-blue);
+    line-height: 1.5;
+    margin: 0.5rem 0;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.details div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details div p {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.details .value p {
+    font-family: "Outfit-SemiBold", sans-serif;
+    color: var(--cyan);
+}
+
+.details .value img {
+    width: 0.8rem;
+    height: 1.2rem;
+}
+
+.details .time p {
+    font-family: "Outfit-Regular", sans-serif;
+    color: var(--soft-blue);
+}
+
+.details .time img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+hr {
+    width: 100%;
+    margin: 1rem 0;
+    background-color: black;
+    border: 1px solid var(--line-color);
+    border-bottom: none;
+}
+
+.author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.author img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.author span {
+    display: flex;
+    font-family: "Outfit-Regular", sans-serif;
+    font-size: 1.2rem;
+    color: var(--soft-blue);
+    margin: 0 1rem;
+}
+
+.author span p {
+    color: var(--white);
+    transition: 0.4s ease-in-out;
+}
+
+.images:hover .overlay {
+    opacity: 0.5;
+}
+
+.images:hover .view-icon {
+    opacity: 1;
+}
+
+.text h1:hover, .author span p:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+
+.attribution {
+    width: 100%;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--black);   
+}
+
+.attribution span {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.attribution span a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 375px) {
+    .text {
+        margin: 0.8rem 0;
+    }
+
+    .text h1 {
+        margin: 1rem 0;
+    }
+
+    .details {
+        margin-top: 0.5rem;
+    }
+}
